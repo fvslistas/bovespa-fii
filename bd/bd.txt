@@ -1,2 +1,2 @@
 docker rm -f bovespa-fii-mysql 
-docker run --name bovespa-fii-mysql -v bovespa-fii-mysql-data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=abcde12345 -d mysql:8.0.29-debian
+docker run --name bovespa-fii-mysql --network bovespa -v bovespa-fii-mysql-data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=abcde12345 -d mysql:8.0.29-debian
